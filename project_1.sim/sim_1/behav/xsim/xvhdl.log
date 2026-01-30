@@ -1,4 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/mathias8dev/VivadoProjects/M1_Sorbonne_SysCom_UM4IN108-FPGA_TP1/project_1.srcs/sources_1/new/Impulse_Count.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'IMPULSE_COUNT'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/mathias8dev/VivadoProjects/M1_Sorbonne_SysCom_UM4IN108-FPGA_TP1/project_1.srcs/sim_1/new/TB_Impulse_Count.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'TB_impulse_count'
