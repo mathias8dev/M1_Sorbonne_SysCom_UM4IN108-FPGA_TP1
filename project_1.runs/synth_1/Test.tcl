@@ -83,7 +83,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc /home/mathias8dev/VivadoProjects/M1_Sorbonne_SysCom_UM4IN108-FPGA_TP1/project_1.srcs/constrs_1/new/Test_Basys.xdc
+set_property used_in_implementation false [get_files /home/mathias8dev/VivadoProjects/M1_Sorbonne_SysCom_UM4IN108-FPGA_TP1/project_1.srcs/constrs_1/new/Test_Basys.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental /home/mathias8dev/VivadoProjects/M1_Sorbonne_SysCom_UM4IN108-FPGA_TP1/project_1.srcs/utils_1/imports/synth_1/Test.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
