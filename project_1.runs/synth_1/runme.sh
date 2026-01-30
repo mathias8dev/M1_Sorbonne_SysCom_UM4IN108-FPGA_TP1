@@ -37,4 +37,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log Test_CPT.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Test_CPT.tcl
+EAStep vivado -log IMPULSE_COUNT.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source IMPULSE_COUNT.tcl

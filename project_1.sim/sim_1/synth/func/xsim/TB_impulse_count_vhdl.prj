@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"TB_impulse_count_func_synth.vhd" \
+"../../../../../project_1.srcs/sim_1/new/TB_Impulse_Count.vhd" \
+
+# Do not sort compile order
+nosort
