@@ -2,3 +2,6 @@ Running: xsim.dir/TB_impulse_count_func_synth/xsimk -simmode gui -wdb TB_impulse
 Design successfully loaded
 Design Loading Memory Usage: 199172 KB (Peak: 199172 KB)
 Design Loading CPU Usage: 880 ms
+Simulation completed
+Simulation Memory Usage: 289108 KB (Peak: 338440 KB)
+Simulation CPU Usage: 880 ms

@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Fri Jan 30 17:46:00 2026
-# Process ID         : 2073238
+# Start of session at: Fri Feb  6 14:29:55 2026
+# Process ID         : 747991
 # Current directory  : /home/mathias8dev/VivadoProjects/M1_Sorbonne_SysCom_UM4IN108-FPGA_TP1/project_1.runs/synth_1
 # Command line       : vivado -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
 # Log file           : /home/mathias8dev/VivadoProjects/M1_Sorbonne_SysCom_UM4IN108-FPGA_TP1/project_1.runs/synth_1/Top.vds
@@ -13,12 +13,12 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 24.04.3 LTS
 # Processor Detail   : Intel(R) Core(TM) i7-14700HX
-# CPU Frequency      : 820.852 MHz
+# CPU Frequency      : 801.975 MHz
 # CPU Physical cores : 20
 # CPU Logical cores  : 28
 # Host memory        : 33339 MB
 # Swap memory        : 78350 MB
 # Total Virtual      : 111690 MB
-# Available Virtual  : 83769 MB
+# Available Virtual  : 70507 MB
 #-----------------------------------------------------------
 source Top.tcl -notrace

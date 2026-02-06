@@ -85,6 +85,7 @@ begin
 	begin
 		
 		LED <= "0000"; -- Par D�faut les LEDs Sont Eteintes
+		EF  <= EP;     -- Par D�faut on Reste dans l'Etat Courant
 	
 		-----------------------------------------------------------------
 		-- 						Modes de Fonctionnement							--
@@ -110,10 +111,9 @@ begin
 			-- Le Compteur Compte Jusqu'au Seuil puis on Passe � l'Etat Suivant
 			when CLIGN_OFF	=> if Mode = "00" then EF <= LED_OFF;
 									elsif Mode = "11" then EF <= LED_ON;
+									elsif Cpt = Seuil then EF <= CLIGN_ON;
 									end if;
-									if Cpt = Seuil then EF <= LED_ON;
-									end if;
-									
+
 			-- LEDs Allum�es
 			-- On Reste dans Cet Etat Tant que Mode est � 11
 			-- Si Mode Passe � 10, On Passe en LEDs Clignotement
@@ -128,8 +128,7 @@ begin
 			when CLIGN_ON	=> LED <= "1111";
 									if Mode = "00" then EF <= LED_OFF;
 									elsif Mode = "11" then EF <= LED_ON;
-									end if;
-									if Cpt = Seuil then EF <= LED_OFF;
+									elsif Cpt = Seuil then EF <= CLIGN_OFF;
 									end if;
 		end case;
 	end process;

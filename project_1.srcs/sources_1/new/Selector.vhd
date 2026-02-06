@@ -9,12 +9,12 @@
 
 -- XDC File:			Impulse_Selector.xdc					
 
--- Description: D�codeur - Version KO
+-- Description: Décodeur - Version KO
 --
---		G�n�re en Sortie une Valeur "Limit"
+--		Génère en Sortie une Valeur "Limit"
 --			- Cette Valeur Depend de Celle d'un Signal d'Entree sur 4 Bits (Count)
---			- Limit Est Remise � Jour A Chaque Appui sur le Bouton Right
---			- Limit Sera Utilis�e par une Machine � Etats dans la Suite du TP...
+--			- Limit Est Remise à Jour A Chaque Appui sur le Bouton Right
+--			- Limit Sera Utilisée par une Machine à Etats dans la Suite du TP...
 --
 ----------------------------------------------------------------------------------
 library IEEE;
@@ -67,11 +67,11 @@ begin
 				case (Decode) is
 			
 					when "00" => Limit <= (others => '0');
-					when "01" => Limit <= X"96E3600";		-- 24 000 000 en D�cimal
-					when "10" => Limit <= X"87A1200";		-- 8 000 000 en D�comal
+					when "01" => Limit <= X"96E3600";		-- 24 000 000 en Décimal
+					when "10" => Limit <= X"87A1200";		-- 8 000 000 en Décimal
 					when "11" => Limit <= (others => '1');	
 	
-					when others => NULL; -- RETIRER LE COMMENTAIRE POUR CORRIGER L'ERREUR
+					when others => NULL;
 	
 				end case;
 			end if;
@@ -82,10 +82,10 @@ begin
 	--------------------------
 	-- Commande du Decodeur --
 	--------------------------
-	Decode <= 		"11" when Sup='1'		-- Si Count > 9 		 --> Decode = 11
-				 else	"10" when Count > 5	-- Si Count = 6,7,8,9 --> Decode = 10
-				 else "01" when Count > 2;	-- Si Count = 3,4,5   --> Decode = 01
-											-- Si Count = 0,1,2   --> Decode = 00
+    Decode <= 	 "11" when Sup='1'		-- Si Count > 9 		 --> Decode = 11
+				 else "10" when Count > 5	-- Si Count = 6,7,8,9 --> Decode = 10
+				 else "01" when Count > 2	-- Si Count = 3,4,5   --> Decode = 01
+				 else "00";					-- Si Count = 0,1,2   --> Decode = 00
 	
 end Behavioral;
 
